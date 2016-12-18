@@ -1,0 +1,22 @@
+<h1>Owners</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th>Contact Number</th>
+    <th></th>
+    <th>Ideal Type</th>
+  </tr>
+  <% for owner in @owners %>
+  <tr>
+    <td><%= owner.name %></td>
+    <td>|</td>
+    <td><%= owner.contact_number %></td>
+    <td>|</td>
+    <td><%= owner.ideal_type %></td>
+
+
+  </tr>
+  <% end %>
+</table>

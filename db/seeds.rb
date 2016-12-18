@@ -1,9 +1,12 @@
-require_relative( '../models/anaimal.rb' )
+require_relative( '../models/adoption.rb')
+require_relative( '../models/animal.rb' )
 require_relative( '../models/owner.rb' )
 require('pry')
 
+Adoption.delete_all
 Animal.delete_all
 Owner.delete_all
+
 
 animal1 = Animal.new({
   'name' => 'Lennon',
@@ -76,7 +79,7 @@ owner2 = Owner.new({
 owner2.save
 
 owner3 = Owner.new({
-  'name' => 'Amy',
+  'name' => 'Peter',
   'contact_number' => "01234556777",
   'ideal_type' => "Cat"
   })

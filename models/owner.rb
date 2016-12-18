@@ -15,7 +15,7 @@ class Owner
     sql = "INSERT INTO owners (
       name, contact_number, ideal_type
     ) VALUES (
-      '#{ @name }', '#{@contact_number}, #{ @ideal_type }'
+      '#{ @name }', '#{@contact_number}', '#{ @ideal_type }'
     ) RETURNING *"
     results = SqlRunner.run(sql)
     @id = results.first()['id'].to_i
