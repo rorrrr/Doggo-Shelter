@@ -29,12 +29,12 @@ get '/owners/:id/edit' do
   erb(:"owners/edit")
 end
 
-post '/pizzas/:id' do
+post '/owners/:id' do
   Owner.update(params)
-  redirect to "owners/#{ params[:id] }"
+  redirect to "/owners/#{ params[:id] }"
 end
 
-post '/pizzas/:id/delete' do
+post '/owners/:id/delete' do
   Owner.destroy( params[:id] )
   redirect to('/owners')
 end

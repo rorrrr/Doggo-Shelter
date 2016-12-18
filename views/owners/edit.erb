@@ -1,0 +1,31 @@
+<h1>Edit Owners Information</h1>
+
+
+<form action="/owners/<%= @owner.id %>" method="post">
+
+  <label>
+  Change Full Name:
+    <input type="text" name="name" value="<%= @owner.name %>"/>
+  
+  </label>
+
+
+  <label>
+  Change Contact Number:
+    <input type="tel" name="contact_number" value="<%= @owner.contact_number %>"/>
+  </label>
+
+
+  <label>
+  Change Ideal Animal:
+    <select name="ideal_type">
+      <option <%= "selected" if @owner.ideal_type == "Dog" %> value="Dog">Dog</option>
+      <option <%= "selected" if @owner.ideal_type == "Chipmunk" %> value="Chipmunk">Chipmunk</option>
+      <option <%= "selected" if @owner.ideal_type == "Walrus" %> value="Walrus">Walrus</option>
+      <option <%= "selected" if @owner.ideal_type == "Parrot" %> value="Parrot">Parrot</option>
+    </select>
+  </label>
+
+  <input type="submit" value="Update Owner's information"/>
+
+</form>

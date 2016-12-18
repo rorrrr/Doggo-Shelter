@@ -38,4 +38,20 @@ class Owner
     SqlRunner.run( sql )
   end
 
+  def self.update( options )
+    sql = "
+          UPDATE owners SET
+          name='#{options['name']}',
+          contact_number='#{options['contact_number']}',
+          ideal_type='#{options['ideal_type']}'
+          WHERE id='#{options['id']}'
+          "
+    SqlRunner.run( sql )
+  end
+
+  def self.destroy( id )
+    sql = "DELETE FROM owners WHERE id=#{id}"
+    SqlRunner.run( sql )
+  end
+
 end

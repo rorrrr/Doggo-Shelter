@@ -64,7 +64,7 @@ animal5.save
 
 owner1 = Owner.new({
   'name' => 'Rory',
-  'contact_number' => "07444976627",
+  'contact_number' => "7444976627",
   'ideal_type' => "Dog"
   })
 
@@ -72,7 +72,7 @@ owner1.save
 
 owner2 = Owner.new({
   'name' => 'Amy',
-  'contact_number' => "07221156777",
+  'contact_number' => "7221156777",
   'ideal_type' => "Walrus"
   })
 
@@ -80,8 +80,8 @@ owner2.save
 
 owner3 = Owner.new({
   'name' => 'Peter',
-  'contact_number' => "01234556777",
-  'ideal_type' => "Cat"
+  'contact_number' => "1234556777",
+  'ideal_type' => "Chipmunk"
   })
 
 owner3.save
