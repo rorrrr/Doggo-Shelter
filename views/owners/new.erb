@@ -1,0 +1,29 @@
+<h1>Add an Owner</h1>
+
+<form action="/owners" method="post">
+
+  <label>
+  Full Name:
+  <input type="text" name="name"/>
+  
+  </label>
+
+
+  <label>
+  Contact Number:
+  <input type="text" name="contact_number"/>
+  </label>
+
+
+  <label>
+  Looking to home:
+    <select name="ideal_type">
+    <option value="Dog">Dog</option>
+    <option value="Chipmunk">Chipmunk</option>
+    <option value="Walrus">Walrus</option>
+    </select>
+  </label>
+
+  <input type="submit" value="Add Owner"/>
+
+</form>
