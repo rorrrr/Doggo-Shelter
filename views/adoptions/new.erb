@@ -7,7 +7,7 @@
   <p>
     <label>
       <select name="owner_id">
-        <% for owner in @owners %>
+        <% for owner in @owners%>
         <option value="<%= owner.id %>"><%= owner.name %></option>
         <% end %>
       </select>
@@ -21,7 +21,9 @@
     <label>
       <select name="animal_id">
         <% for animal in @animals %>
-        <option value="<%= animal.id %>"><%= animal.name %></option>
+          <% if animal.rating > 9 %>
+          <option value="<%= animal.id %>"><%= animal.name %></option>
+          <% end %>
         <% end %>
       </select>
     </label>

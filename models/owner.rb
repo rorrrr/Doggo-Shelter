@@ -1,4 +1,5 @@
 require_relative( '../db/sql_runner' )
+require_relative( 'animal.rb' )
 
 class Owner
   attr_reader(:id)
@@ -66,7 +67,7 @@ class Owner
   # end
 
 
-  def animal
+  def animals
     sql = "
           SELECT * FROM animals an
           INNER JOIN adoptions ad
@@ -74,8 +75,7 @@ class Owner
           WHERE ad.owner_id = #{@id}
           "
     results = SqlRunner.run( sql )
-    results2 = results.map { |animal| Animal.new( animal ) }
-    return results2
+    return results.map { |animal| Animal.new( animal )}
   end
 
 end

@@ -10,4 +10,15 @@
 <input type="submit" value="Delete Owner"/>
 </form>
 
-<p> Adopted: <%= @owner.animal %></p>
+<p> Adopted: </p>
+<% @owner.animals.each do |animal| %>
+
+<p> <%= animal.name %> </p>
+
+<p><img id="animal_image" src="/images/<%= animal.image %>" height="442"></p>
+
+<% end %>
+
+<% if @owner.animals.count == 0%>
+<label>No Pets Adopted</label> 
+<% end %>
