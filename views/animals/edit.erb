@@ -9,17 +9,17 @@
   </label>
 
   <label>
-  Change Type:
-    <input type="text" name="type" value="<%= @animal.type %>"/>
+  Change Breed:
+    <input type="text" name="breed" value="<%= @animal.breed %>"/>
   </label>
 
   <label>
-  Change Breed:
-    <select name="breed">
-      <option <%= "selected" if @animal.breed == "Dog" %> value="Dog">Dog</option>
-      <option <%= "selected" if @animal.breed == "Chipmunk" %> value="Chipmunk">Chipmunk</option>
-      <option <%= "selected" if @animal.breed == "Walrus" %> value="Walrus">Walrus</option>
-      <option <%= "selected" if @animal.breed == "Parrot" %> value="Parrot">Parrot</option>
+  Change Type:
+    <select name="type">
+      <option <%= "selected" if @animal.type == "Dog" %> value="Dog">Dog</option>
+      <option <%= "selected" if @animal.type == "Chipmunk" %> value="Chipmunk">Chipmunk</option>
+      <option <%= "selected" if @animal.type == "Walrus" %> value="Walrus">Walrus</option>
+      <option <%= "selected" if @animal.type == "Parrot" %> value="Parrot">Parrot</option>
     </select>
   </label>
 

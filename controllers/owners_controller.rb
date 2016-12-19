@@ -38,3 +38,9 @@ post '/owners/:id/delete' do
   Owner.destroy( params[:id] )
   redirect to('/owners')
 end
+
+# get '/owners/:id/animals' do
+#   id = params[:id]
+#   @owner = Owner.find(id)
+#   @adoptions = Adoption.all
+# end

@@ -1,6 +1,7 @@
 require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require_relative( '../models/animal.rb' )
+require_relative( '../models/adoption.rb' )
 
 get '/animals' do
   @animals = Animal.all()
@@ -36,4 +37,14 @@ end
 post '/animals/:id/delete' do
   Animal.destroy( params[:id] )
   redirect to('/animals')
+end
+
+get '/adoptable' do
+  @animals = Animal.all
+  erb(:"animals/adoptable")
+end
+
+get '/training' do
+  @animals = Animal.all
+  erb(:"animals/training")
 end

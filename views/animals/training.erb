@@ -1,5 +1,4 @@
-<h1>Animals</h1>
-<p><a href="/animals/new">Add an Animal</a></p>
+<h1>Animals Still in Training</h1>
 
 <table>
   <tr>
@@ -15,6 +14,7 @@
     <th></th>
   </tr>
   <% for animal in @animals %>
+  <% if animal.rating < 10 %>
   <tr>
     <td><a href="/animals/<%= animal.id %>"><%= animal.name %> </a></td>
     <td>|</td>
@@ -28,18 +28,5 @@
     <td>|</td>
   </tr>
   <% end %>
+  <% end %>
 </table>
-
-<p>
-<li>
-<a href="/adoptable"> Show Animals Available for Adoption</a>
-</li>
-<li>
-<a href="/training"> Show Animals Still in Training</a>
-</li>
-</p>
-
-
-
-
-
