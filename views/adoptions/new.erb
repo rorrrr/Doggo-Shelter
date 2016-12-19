@@ -22,7 +22,9 @@
       <select name="animal_id">
         <% for animal in @animals %>
           <% if animal.rating > 9 %>
-          <option value="<%= animal.id %>"><%= animal.name %></option>
+            <% if animal.adopted.count == 0 %>
+            <option value="<%= animal.id %>"><%= animal.name %></option>
+            <% end %>
           <% end %>
         <% end %>
       </select>
