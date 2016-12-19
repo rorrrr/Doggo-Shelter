@@ -1,0 +1,43 @@
+<h1>Edit Animal's Information</h1>
+
+
+<form action="/animals/<%= @animal.id %>" method="post">
+
+  <label>
+  Change Name:
+    <input type="text" name="name" value="<%= @animal.name %>"/>
+  </label>
+
+  <label>
+  Change Type:
+    <input type="text" name="type" value="<%= @animal.type %>"/>
+  </label>
+
+  <label>
+  Change Breed:
+    <select name="breed">
+      <option <%= "selected" if @animal.breed == "Dog" %> value="Dog">Dog</option>
+      <option <%= "selected" if @animal.breed == "Chipmunk" %> value="Chipmunk">Chipmunk</option>
+      <option <%= "selected" if @animal.breed == "Walrus" %> value="Walrus">Walrus</option>
+      <option <%= "selected" if @animal.breed == "Parrot" %> value="Parrot">Parrot</option>
+    </select>
+  </label>
+
+  <label>
+  Change Bio:
+    <input type="text" name="bio" value="<%= @animal.bio %>"/>
+  </label>
+
+  <label>
+  Change Adoptability:
+    <input type="number" name="rating" value="<%= @animal.rating %>"/>
+  </label>
+
+  <label>
+  Change Image:
+    <input type="text" name="image" value="<%= @animal.image %>"/>
+  </label>
+
+  <input type="submit" value="Update Animals's information"/>
+
+</form>
