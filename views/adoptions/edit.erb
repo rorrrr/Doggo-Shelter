@@ -1,6 +1,6 @@
-<h1>New Adoption!</h1>
+<h1>Edit Adoption!</h1>
 
-<form action="/adoptions" method="post">
+<form action="/adoptions/<%= @adoption.id %>" method="post">
   <p>
   Select an Owner:
   </p>
@@ -27,5 +27,5 @@
     </label>
   </p>
 
-  <input class="btn btn--action" type='submit' value="Send to Forever Home!">
+  <input class="btn btn--action" type='submit' value="Change adoption details!">
 </form>

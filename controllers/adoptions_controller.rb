@@ -11,7 +11,7 @@ get '/adoptions' do
 end
 
 get '/adoptions/new' do
-  @animals = Anaimal.all
+  @animals = Animal.all
   @owners = Owner.all
   erb(:"adoptions/new")
 end
@@ -20,6 +20,25 @@ post '/adoptions' do
   adoption = Adoption.new(params)
   adoption.save
   redirect to("/adoptions")
+end
+
+get '/adoptions/:id' do
+  id = params[:id]
+  @adoption = Adoption.find(id)
+  erb(:"adoptions/show")
+end
+
+
+get '/adoptions/:id/edit' do
+  @animals = Animal.all
+  @owners = Owner.all
+  @adoption = Adoption.find(params[:id])
+  erb(:"adoptions/edit")
+end
+
+post '/adoptions/:id' do
+  Adoption.update(params)
+  redirect to "/adoptions"
 end
 
 post '/adoptions/:id/delete' do
