@@ -1,4 +1,5 @@
 require_relative( '../db/sql_runner' )
+require_relative( 'owner.rb' )
 
 class Animal
   
@@ -73,11 +74,9 @@ class Animal
         return results.map { |animal| Animal.new( animal ) }
   end
 
-  def breed_filter(breed)
-    sql = "
-          SELECT * FROM animals 
-          WHERE animals.breed = #{breed}
-          "
-  end
+  # def tinderable(array)
+    
+  # end
+
 
 end

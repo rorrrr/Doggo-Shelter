@@ -1,26 +1,81 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Doggo and Friend's Animal Shelter</title>
+  <head>
+    <title>Doggo Land</title>
+
+  </head>
+
+  <link rel="stylesheet" type="text/css" href="/styles/structure.css">
+
+  <div class="content">  
+    <h2>
+     <nav>
+       <ul>
+         <li>
+           <a href="/">Home</a>
+         </li>
+         <li>
+           <a href="/animals"> All Animals</a>
+         </li>
+         <li>
+           <a href="/owners">Owners</a>
+         </li>
+         <li>
+           <a href="/adoptions">Adoptions</a>
+         </li>
+       </ul>
+     </nav>
+    <h2>
+   </div>
+
+
+    <div class="background-wrap">
+      <video id="video-bg-elem" preload="auto" autoplay="true" loop="loop" muted="muted"> 
+        <source src="/puppy.mp4" type="video/mp4">
+        BOY. ya browser CANT HANDLE ALL THIS PUPPY THO xd - Rory 2016, probably
+      </video>          
+    </div>
+
+    
+    <section id="content">
+     <%= yield %>
+     </section>
+  </body>
+</html>
+
+<!-- 
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Doggo and Friend's Animal Shelter</title>
+
 </head>
 <body>
-  <nav>
-    <ul>
-      <li>
-        <a href="/">Home</a>
-      </li>
-      <li>
-        <a href="/animals"> All Animals</a>
-      </li>
-      <li>
-        <a href="/owners">Owners</a>
-      </li>
-      <li>
-        <a href="/adoptions">Adoptions</a>
-      </li>
-    </ul>
-  </nav>
+  
+  <div class="homepage-hero-module">
+      <div class="video-container">
+          <div class="filter"></div>
+          <video autoplay loop class="fillWidth">
+              <source src="/puppy.mp4" type="video/mp4" />Upgrade yo browser, fool. Yes I, Rory, wrote this entire page. I totally understood it would only show if the video failed. I didnt just copy this code. promise. Heres the originals: 
+              https://github.com/reinis-berzins/tutorial-files/blob/master/VideoBg/videoBg.html -->
+             <!--  <div class="homepage-hero-module">
+                  <div class="video-container">
+                      <div class="filter"></div>
+                      <video autoplay loop class="fillWidth">
+                          <source src="PATH_TO_MP4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                          <source src="PATH_TO_WEBM" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                      </video>
+                      <div class="poster hidden">
+                          <img src="PATH_TO_JPEG" alt="">
+                      </div>
+                  </div>
+              </div>
+          </video>
+      </div>
+  </div>
 
-  <%= yield %>
+  <%= %>
 </body>
 </html>
+
+ -->

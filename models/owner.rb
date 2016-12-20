@@ -80,11 +80,14 @@ class Owner
 
   def matches
     sql = "
-          SELECT * FROM animals an
-          WHERE an.type = #{@breed}
+          SELECT * FROM animals 
+          WHERE rating >= 10
+          AND type = '#{@ideal_type}'
           "
       results = SqlRunner.run( sql )
-      return results.map { |animal| Animal.new( animal ) }
+      results_array = results.map { |animal| Animal.new( animal ) }
+      tindermatches = results_array.select { |animal| animal.adopted.count == 0}
+      return tindermatches
   end
 
 end

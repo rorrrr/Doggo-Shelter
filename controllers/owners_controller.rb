@@ -2,6 +2,8 @@ require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require( 'pry' )
 require_relative( '../models/owner.rb' )
+require_relative( '../models/animal.rb')
+require_relative( '../controllers/animals_controller.rb')
 
 get '/owners' do
   @owners = Owner.all()
@@ -39,8 +41,11 @@ post '/owners/:id/delete' do
   redirect to('/owners')
 end
 
-# get '/owners/:id/animals' do
-#   id = params[:id]
-#   @owner = Owner.find(id)
-#   @adoptions = Adoption.all
-# end
+get '/owners/:id/:match_number' do
+  @owner = Owner.find( params[:id] )
+  @animal_match = @owner.matches()[params[:match_number].to_i]
+  if @animal_match == nil
+    return erb(:"owners/nomatches")
+  end
+  erb(:"owners/matches")
+end
