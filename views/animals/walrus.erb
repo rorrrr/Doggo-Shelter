@@ -1,5 +1,4 @@
-<h1>Animals</h1>
-<p><a href="/animals/new">Add an Animal</a></p>
+<h1>All Walrus</h1>
 
 <table>
   <tr>
@@ -15,6 +14,7 @@
     <th></th>
   </tr>
   <% for animal in @animals %>
+  <% if animal.type == 'Walrus' %>
   <tr>
     <td><a href="/animals/<%= animal.id %>"><%= animal.name %> </a></td>
     <td>|</td>
@@ -28,24 +28,7 @@
     <td>|</td>
   </tr>
   <% end %>
+  <% end %>
 </table>
 
-
-<p>
-<li>
-<a href="/adoptable"> Show Animals Available for Adoption</a>
-</li>
-<li>
-<a href="/training"> Show Animals Still in Training</a>
-</li>
-<li>
-<a href="/dogs"> Dogs</a>  <a href="/chipmunks"> Chipmunks</a>  <a href="/parrots"> Parrot</a>  <a href="/walrus"> Walrus</a>
-</li>
-</p>
-
-
-
-
-
-
-
+<a href="/walrus/adoptable"> Adoptable Walrus</a>

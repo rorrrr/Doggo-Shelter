@@ -39,6 +39,7 @@ post '/animals/:id/delete' do
   redirect to('/animals')
 end
 
+
 get '/adoptable' do
   @animals = Animal.all
   erb(:"animals/adoptable")
@@ -47,4 +48,44 @@ end
 get '/training' do
   @animals = Animal.all
   erb(:"animals/training")
+end
+
+get '/dogs' do
+  @animals = Animal.all
+  erb(:"animals/dogs")
+end
+
+get '/walrus' do
+  @animals = Animal.all
+  erb(:"animals/walrus")
+end
+
+get '/parrots' do
+  @animals = Animal.all
+  erb(:"animals/parrot")
+end
+
+get '/chipmunks' do
+  @animals = Animal.all
+  erb(:"animals/chipmunk")
+end
+
+get '/dogs/adoptable' do
+    @animals = Animal.all
+    erb(:"animals/dogs-adoptable")
+end
+
+get '/parrots/adoptable' do
+    @animals = Animal.all
+    erb(:"animals/parrot-adoptable")
+end
+
+get '/walrus/adoptable' do
+    @animals = Animal.all
+    erb(:"animals/walrus-adoptable")
+end
+
+get '/chipmunks/adoptable' do
+    @animals = Animal.all
+    erb(:"animals/chipmunk-adoptable")
 end
