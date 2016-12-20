@@ -73,13 +73,11 @@ class Animal
         return results.map { |animal| Animal.new( animal ) }
   end
 
-  # def owner
-  #   sql = "SELECT * FROM owners o
-  #         INNER JOIN adoptions ad
-  #         ON ad.owner_id = o.id
-  #         WHERE o.id = #{@owner_id}"
-  #   results = SqlRunner.run( sql )
-  #   return Owner.new( results.first )
-  # end
+  def breed_filter(breed)
+    sql = "
+          SELECT * FROM animals 
+          WHERE animals.breed = #{breed}
+          "
+  end
 
 end

@@ -75,7 +75,16 @@ class Owner
           WHERE ad.owner_id = #{@id}
           "
     results = SqlRunner.run( sql )
-    return results.map { |animal| Animal.new( animal )}
+    return results.map { |animal| Animal.new( animal ) }
+  end
+
+  def matches
+    sql = "
+          SELECT * FROM animals an
+          WHERE an.type = #{@breed}
+          "
+      results = SqlRunner.run( sql )
+      return results.map { |animal| Animal.new( animal ) }
   end
 
 end
