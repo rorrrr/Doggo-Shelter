@@ -3,12 +3,19 @@
 
 <p><a href="/adoptions/new">Add an Adoption</a></p>
 
-<ul>
+</br>
+</br>
+
   <% for adoption in @adoptions %>
-  <li>
-  <p><%= adoption.owner.name %> adopted <%= adoption.animal.name %> </p> <a href="/adoptions/<%= adoption.id %>/edit">Edit</a> <form action="/adoptions/<%= adoption.id %>/delete" method="post">
-<input type="submit" value="Delete Adoption"/>
-</form>
-  </li>
+  <div class="adoption-item"> 
+  <hr>
+  <p><%= adoption.owner.name %> adopted <%= adoption.animal.name %> </p> 
+  <p> <a href="/adoptions/<%= adoption.id %>/edit">Edit Adoption</a> </p> 
+  <form action="/adoptions/<%= adoption.id %>/delete" method="post">
+<input type="submit" value="Delete Adoption"/> </form>
+</div>
+</br>
+</br>
+ 
+
   <% end %>
-</ul>

@@ -1,18 +1,22 @@
+<div class="adoption-item"><p>
+<img id="tinder" src="/images/Tinder_logo.png" height="62"><p>
+</div>
+
 <p> Match for <%= @owner.name %>: </p>
 
-<h1> <%= @animal_match.name %> </h1>
+<h3> <%= @animal_match.name %> </h3>
 
-<h2> Tinder description that no-one ever reads: </h2>
- <h3> <%= @animal_match.bio %> </h3>
+<p> Tinder description that no-one ever reads: </p>
+ <h2> <%= @animal_match.bio %> </h2>
 
-<p class="btn--wrapper">
-  <a class="btn btn--action" href="/owners/<%= @owner.id %>/<%= params[:match_number].to_i + 1 %>">SWIPE LEFT! (hell nah, he ugly)</a>
+ </br>
+
+<p>
+  <a href="/owners/<%= @owner.id %>/<%= params[:match_number].to_i + 1 %>" method="get">
+  <img id="tinder_no" src="/images/Tinder_no.png" height="82"></a>
+
+  <a href="/adoptions/new" method="get">
+  <img id="tinder_yes" src="/images/Tinder_yes.jpg" height="82"></a>
 </p>
-
-<p class="btn--wrapper">
-  <a class="btn btn--action" href="/adoptions/new">SWIPE RIGHT! (adopt)</a>
-</p>
-
-
 
 <p><img id="animal_image" src="/images/<%= @animal_match.image %>" height="442"></p>
