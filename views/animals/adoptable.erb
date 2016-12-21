@@ -15,6 +15,7 @@
   </tr>
   <% for animal in @animals %>
   <% if animal.rating >= 10 %>
+  <% if animal.adopted.count == 0 %>
   <tr>
     <td><a href="/animals/<%= animal.id %>"><%= animal.name %> </a></td>
     <td>|</td>
@@ -27,6 +28,8 @@
     <td><%= animal.rating %></td>
     <td>|</td>
   </tr>
+  
+  <% end %>
   <% end %>
   <% end %>
 </table>

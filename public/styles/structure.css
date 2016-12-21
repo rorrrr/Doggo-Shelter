@@ -4,6 +4,7 @@
       }
       body {
         font-family: Calibri, sans-serif;
+        color: tan;
       }
       .background-wrap {
         position: fixed;
@@ -49,7 +50,7 @@
         width: 100%;
         min-height: 100%;
         z-index: 1000;
-        background-color: rgba(0,0,0,0.3)
+        background-color: rgba(0,0,0,0.5)
       }
       .content h1 {
         text-align: center;
@@ -80,20 +81,6 @@
           letter-spacing: 1px;
           color: #fff;
       }
-       .content a:link {
-           text-decoration: none;
-       }
-
-       .content a:visited {
-           text-decoration: none;
-       }
-
-      .content a:hover {
-          color: hotpink;
-      }
-
-       .content a:active {
-           text-decoration: underline;
-       }
+     
       
     </style>
