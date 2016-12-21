@@ -14,7 +14,29 @@
         top: 0;
         left: 0;
       } 
-      
+
+      a {
+        font-size: 20px;
+        letter-spacing: 1px;
+        color: #fff;
+      }
+
+      a:link {
+          text-decoration: none;
+      }
+
+      a:visited {
+          text-decoration: none;
+      }
+
+     a:hover {
+         color: hotpink;
+     }
+
+      a:active {
+          text-decoration: underline;
+      }
+
       #video-bg-elem {
         position: absolute;
         top: 0;
@@ -27,7 +49,7 @@
         width: 100%;
         min-height: 100%;
         z-index: 1000;
-        background-color: rgba(0,0,0,0.3);
+        background-color: rgba(0,0,0,0.3)
       }
       .content h1 {
         text-align: center;
@@ -41,17 +63,37 @@
       .content p {
         text-align: center;
         font-size: 20px;
-        letter-spacing: 3px;
+        letter-spacing: 1px;
         color: #aaa;
       }
       .content h2 {
         vertical-align: top;
-        text-align: left;
-        font-size: 30px;
-        letter-spacing: 0px;
-        color: blue;
+        text-align: center;
+        font-size: 20px;
+        letter-spacing: 1px;
+        color: #fff;
+      }
+      .content h3 {
+          text-align: center;
+          z-index: 200;
+          font-size: 55px;
+          letter-spacing: 1px;
+          color: #fff;
+      }
+       .content a:link {
+           text-decoration: none;
+       }
+
+       .content a:visited {
+           text-decoration: none;
+       }
+
+      .content a:hover {
+          color: hotpink;
       }
 
-
+       .content a:active {
+           text-decoration: underline;
+       }
       
     </style>
