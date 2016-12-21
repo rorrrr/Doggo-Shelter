@@ -1,3 +1,8 @@
+      @font-face {
+        font-family: 'pawfont';
+        src :url('../font/AustieBostKittenKlub.ttf');
+      }
+
       * {
         margin: 0;
         padding: 0;
@@ -20,6 +25,7 @@
         font-size: 20px;
         letter-spacing: 1px;
         color: #fff;
+
       }
 
       a:link {
@@ -38,6 +44,45 @@
           text-decoration: underline;
       }
 
+
+      div.powerlinks {
+        background-color: rgba(0,0,0,0.7);
+        padding-top: 0.5%;
+        padding-left: 1%;
+        padding-bottom: 0.2%;
+      }
+
+      .powerlinks p {
+        font-size: 40px;
+        color: tan;
+        display: inline;
+      }
+
+      .powerlinks a {
+        font-size: 40px;
+        letter-spacing: 1px;
+        color: #fff;
+        font-family: 'pawfont';
+      }
+
+      .powerlinks a:link {
+          text-decoration: none;
+      }
+
+      .powerlinks a:visited {
+          text-decoration: none;
+      }
+
+      .powerlinks a:hover {
+          color: hotpink;
+      }
+
+      .powerlinks a:active {
+          text-decoration: underline;
+      }
+
+
+
       #video-bg-elem {
         position: absolute;
         top: 0;
@@ -53,6 +98,7 @@
         background-color: rgba(0,0,0,0.5)
       }
       .content h1 {
+        /*font-family: 'pawfont';*/
         text-align: center;
         font-size: 55px;
         text-transform: uppercase;
@@ -76,10 +122,11 @@
       }
       .content h3 {
           text-align: center;
-          z-index: 200;
+          padding-top: 3%;
           font-size: 55px;
           letter-spacing: 1px;
           color: #fff;
+          font-family: 'pawfont';
       }
      
       
